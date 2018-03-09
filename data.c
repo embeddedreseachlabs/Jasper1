@@ -60,6 +60,9 @@ void insert_between()
 	node *p1,*p2;
 	int pos;
 	p1=NULL,p2=first;
+	n=(node*)malloc(sizeof(node));
+	printf("Enter elements\n");
+	scanf("%d",&n->data);
 	printf("Enter the position\n");
 	scanf("%d",&pos);
 	while(pos>1)
@@ -68,9 +71,7 @@ void insert_between()
 		p2=p2->link;
 		pos--;
 	}
-	n=(node*)malloc(sizeof(node));
-	printf("Enter elements\n");
-	scanf("%d",&n->data);
+
 		p1->link=n;
 		n->link=p2;
 }
@@ -148,6 +149,7 @@ void reverse_list()
 {
 	node *p1,*p2;
 	p1=first;
+	temp = p1->link;
 	p2=temp->link;
 	p1->link=NULL;
 	while(p2!=NULL)
