@@ -31,12 +31,13 @@ int main()
 
     for(; n > 0; n--) {
         puts(message);
-        sleep(1);
+        sleep(5);
     }
 
 /*  This section of the program waits for the child process to finish.  */
 
-    if(pid) {
+    if(pid) 
+     {
         int stat_val;
         pid_t child_pid;
 
