@@ -1,0 +1,1 @@
+cmd_/home/raju/code_new/Ker-prog/ddex/part1/kthread.ko := ld -r -m elf_i386 -T ./scripts/module-common.lds --build-id  -o /home/raju/code_new/Ker-prog/ddex/part1/kthread.ko /home/raju/code_new/Ker-prog/ddex/part1/kthread.o /home/raju/code_new/Ker-prog/ddex/part1/kthread.mod.o ;  true

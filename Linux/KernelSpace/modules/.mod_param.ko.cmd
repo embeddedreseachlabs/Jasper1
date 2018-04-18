@@ -1,0 +1,1 @@
+cmd_/home/raju/code_new/Ker-prog/ddex/part1/mod_param.ko := ld -r -m elf_i386 -T ./scripts/module-common.lds --build-id  -o /home/raju/code_new/Ker-prog/ddex/part1/mod_param.ko /home/raju/code_new/Ker-prog/ddex/part1/mod_param.o /home/raju/code_new/Ker-prog/ddex/part1/mod_param.mod.o ;  true

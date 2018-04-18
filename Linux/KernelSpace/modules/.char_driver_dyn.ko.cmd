@@ -1,0 +1,1 @@
+cmd_/home/raju/code_new/Ker-prog/ddex/part1/char_driver_dyn.ko := ld -r -m elf_i386 -T ./scripts/module-common.lds --build-id  -o /home/raju/code_new/Ker-prog/ddex/part1/char_driver_dyn.ko /home/raju/code_new/Ker-prog/ddex/part1/char_driver_dyn.o /home/raju/code_new/Ker-prog/ddex/part1/char_driver_dyn.mod.o ;  true

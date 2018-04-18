@@ -1,9 +1,15 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-
+#include<stdio.h>
+#include<unistd.h>
+ 
 int main()
 {
-    printf("Hellowrold\n");
-    exit(0);
+    int i;
+     
+    printf("Helloworld\n ");
+    printf("Helloworld\n ");
+    printf("Helloworld\n ");
+    printf("Helloworld\n ");
+    printf("\n");
+     
+    return 0;
 }

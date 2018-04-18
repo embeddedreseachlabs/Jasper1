@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
@@ -10,7 +11,15 @@ int main()
     char *message;
     int n;
     int exit_code;
+    char a[30]  = "helloworld";
+    int fd[2];
+    int ret;
 
+    ret = pipe(fd);
+    if(ret<0)
+    {
+    perror("pipe");
+    }
     printf("fork program starting\n");
     pid = fork();
     switch(pid) 
@@ -21,16 +30,29 @@ int main()
         message = "This is the child";
         n = 8;
         exit_code = 37;
+        strcpy(a,"Linux System Programming");
+	ret = write(fd[1],a,15);
+        if(ret < 0)
+	{
+	perror("write");
+
+     }
         break;
     default:
         message = "This is the parent";
         n = 3;
         exit_code = 0;
+
+	ret = read(fd[0],a,15);
+        if(ret < 0)
+	{
+	perror("read");
+        }
         break;
     }
 
     for(; n > 0; n--) {
-        puts(message);
+        printf("%s -- PID = %d\n",a,getpid());
         sleep(2);
     }
 

@@ -5,7 +5,7 @@ int main()
 {
         //A null terminated array of character 
         //pointers
-        char *args[]={"./EXEC",NULL};
+        char *args[]={"./cmd","10","20","30","40",NULL};
         execvp(args[0],args);
      
         /*All statements are ignored after execvp() call as this whole 

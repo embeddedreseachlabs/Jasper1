@@ -29,10 +29,13 @@ int main()
     // of children.
     for (i=0; i<1; i++)
     {
+	if(pid[i])
+        {
         pid_t cpid = waitpid(pid[i], &stat, 0);
         if (WIFEXITED(stat))
             printf("Child %d terminated with status: %d\n",
                    cpid, WEXITSTATUS(stat));
+        }
     }
 return 0;
 }
